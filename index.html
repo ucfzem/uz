@@ -98,16 +98,6 @@
     .project-card:hover .project-name { color: var(--gold-lt); }
 
 
-    /* FIX 2: project-img with fallback gradient background so it always shows something */
-    .project-img {
-      width: 100%; height: 160px; object-fit: cover; border-radius: 4px;
-      opacity: 0.6; transition: opacity 0.3s var(--ease);
-      background: linear-gradient(135deg, #1a1508 0%, #2a1f08 100%);
-      display: block;
-    }
-    .project-card:hover .project-img { opacity: 1; }
-
-
     /* FIX 2b: CSS-only thumbnail fallbacks using pseudo-elements so broken images still look designed */
     .project-img-wrap {
       width: 100%; height: 160px; border-radius: 4px; overflow: hidden; position: relative;
