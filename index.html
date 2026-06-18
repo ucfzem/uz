@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d0b08'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia' font-size='14' fill='%23c9a84c'%3EUZ%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230d0b08%27/%3E%3Ctext x=%2750%25%27 y=%2754%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27Georgia%27 font-size=%2714%27 fill=%27%23c9a84c%27%3EUZ%3C/text%3E%3C/svg%3E">
   <style>
     :root {
       --bg:        #0d0b08;
@@ -89,8 +89,9 @@
     .project-card:hover .project-arrow { opacity: 1; transform: translateX(0); border-color: var(--border-hv); }
     .project-name { font-family: var(--serif); font-size: clamp(22px, 2.2vw, 28px); font-weight: 400; line-height: 1.1; color: var(--fg); transition: color 0.2s; }
     .project-card:hover .project-name { color: var(--gold-lt); }
-    .project-img { width: 100%; height: 160px; object-fit: cover; border-radius: 4px; opacity: 0.6; transition: opacity 0.3s var(--ease); }
+    .project-img { width: 100%; height: 160px; border-radius: 4px; opacity: 0.6; transition: opacity 0.3s var(--ease); background: linear-gradient(135deg, #1a1508 0%, #2a2010 100%); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; }
     .project-card:hover .project-img { opacity: 1; }
+    .project-img-init { font-family: var(--serif); font-size: 36px; color: var(--gold-dim); letter-spacing: 0.02em; }
     .project-desc { font-size: 13px; font-weight: 300; color: var(--fg-mid); line-height: 1.7; flex: 1; }
     .project-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; padding-top: 16px; border-top: 1px solid var(--border); }
     .project-tags-row { display: flex; gap: 6px; flex-wrap: wrap; }
@@ -191,7 +192,7 @@
           <span class="project-type">PWA · Multilingual</span>
           <span class="project-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="9 5 19 5 19 15"/></svg></span>
         </div>
-        <img class="project-img" src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=680&q=80" alt="" loading="lazy" />
+        <div class="project-img" style="background-image:url(https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=680&q=80)"><span class="project-img-init">QM</span></div>
         <h3 class="project-name">Quran Majeed v3</h3>
         <p class="project-desc">Progressive web app for Quran reading in 45+ languages. Offline-first, accessible, built with care for the Muslim diaspora worldwide.</p>
         <div class="project-footer">
@@ -209,7 +210,7 @@
           <span class="project-type">Heritage · Archive</span>
           <span class="project-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="9 5 19 5 19 15"/></svg></span>
         </div>
-        <img class="project-img" src="https://images.unsplash.com/photo-1591256652820-3f2d86f14a2f?w=680&q=80" alt="" loading="lazy" />
+        <div class="project-img"><span class="project-img-init">TA</span></div>
         <h3 class="project-name">Tanger d'Antan</h3>
         <p class="project-desc">Historical photo archive preserving old Tangier — before/after sliders, ambient sound, multilingual storytelling. A love letter to a city.</p>
         <div class="project-footer">
@@ -227,7 +228,7 @@
           <span class="project-type">SaaS · Accounting</span>
           <span class="project-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="9 5 19 5 19 15"/></svg></span>
         </div>
-        <img class="project-img" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=680&q=80" alt="" loading="lazy" />
+        <div class="project-img" style="background-image:url(https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=680&q=80)"><span class="project-img-init">CE</span></div>
         <h3 class="project-name">ComptaEasy</h3>
         <p class="project-desc">French accounting web app with OCR invoice import via Claude Vision API. Node.js/Express backend, sql.js, deployed on Vercel and GitHub Pages.</p>
         <div class="project-footer">
@@ -245,7 +246,7 @@
           <span class="project-type">EdTech · Platform</span>
           <span class="project-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="9 5 19 5 19 15"/></svg></span>
         </div>
-        <img class="project-img" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=680&q=80" alt="" loading="lazy" />
+        <div class="project-img" style="background-image:url(https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=680&q=80)"><span class="project-img-init">LT</span></div>
         <h3 class="project-name">Lingotech</h3>
         <p class="project-desc">French language learning platform with conjugator, Pomodoro, quizzes and AI assistant. Fully i18n across 5 languages.</p>
         <div class="project-footer">
@@ -263,7 +264,7 @@
           <span class="project-type">SaaS · AI Images</span>
           <span class="project-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="9 5 19 5 19 15"/></svg></span>
         </div>
-        <img class="project-img" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=680&q=80" alt="" loading="lazy" />
+        <div class="project-img" style="background-image:url(https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=680&q=80)"><span class="project-img-init">NG</span></div>
         <h3 class="project-name">NanoGen</h3>
         <p class="project-desc">AI image generator with community feed powered by Pollinations.ai and Supabase. Free-tier architecture, real-time public gallery.</p>
         <div class="project-footer">
@@ -281,7 +282,7 @@
           <span class="project-type">Tool · Freelance</span>
           <span class="project-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="9 5 19 5 19 15"/></svg></span>
         </div>
-        <img class="project-img" src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=680&q=80" alt="" loading="lazy" />
+        <div class="project-img" style="background-image:url(https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=680&q=80)"><span class="project-img-init">MI</span></div>
         <h3 class="project-name">MicroInvoice</h3>
         <p class="project-desc">Lightweight PDF invoice generator for freelancers. No backend, no login — just fast, clean invoices in the browser.</p>
         <div class="project-footer">
